@@ -22,6 +22,7 @@ STEP 5:Include Necessary parameters in each functions.
 Developed by : ROSHINI S
 
 REG NO : 212223230174
+
 ```
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -32,18 +33,19 @@ y = [3, 6, 2, 7, 1]
 sns.lineplot(x=x,y=y)
 ```
 
-![image](https://github.com/23008859/EXNO-6-DS/assets/139117979/83bd10af-5ff8-4f01-
-8dc4-312d05a7f27a)
+![image](https://github.com/23008859/EXNO-6-DS/assets/139117979/8598fca5-8f57-402c-923a-1ef0d0dffb1c)
 
 ```
 df = sns.load_dataset("tips")
 df
 ```
+
 ![image](https://github.com/23008859/EXNO-6-DS/assets/139117979/59da7d4c-17b3-43fe-af1e-d9c6b04ce4c2)
 ```
 sns.lineplot(x="total_bill",y="tip", data=df, hue="sex", linestyle='solid', legend="auto")
 ```
 ![image](https://github.com/23008859/EXNO-6-DS/assets/139117979/b79399ed-b091-49dd-a45c-f16c4ecc163f)
+
 ```
 x=[1, 2, 3, 4, 5]
 y1=[3, 5, 2, 6, 1]
@@ -56,6 +58,7 @@ plt.title("Multi-Line Plot")
 plt.xlabel('X Label')
 plt.ylabel("Y Label")
 ```
+
 ![image](https://github.com/23008859/EXNO-6-DS/assets/139117979/e34c0d1e-4457-45b2-9b39-1f636135b952)
 ```
 tips=sns.load_dataset('tips')
