@@ -100,17 +100,22 @@ plt.xlabel('Day of the Week')
 plt.ylabel("Total Bill")
 plt.title('Total Bill by Day and Gender')
 ```
+
 ![image](https://github.com/23008859/EXNO-6-DS/assets/139117979/b0a44bc6-4400-43ed-afcc-094e814b055f)
+
 ```
 tit=pd.read_csv("titanic_dataset.csv")
 tit
 ```
+
 ![image](https://github.com/23008859/EXNO-6-DS/assets/139117979/9ee0894a-977b-468f-8b71-7ee9d940c56d)
+
 ```
 plt.figure(figsize=(8,5))
 sns.barplot(x='Embarked', y='Fare', data=tit, palette='rainbow') 
 plt.title("Fare of Passenger by Embarked Town")
 ```
+
 ![image](https://github.com/23008859/EXNO-6-DS/assets/139117979/5d8b603e-e83e-4f43-9a3c-edf525b0217f)
 
 ```
@@ -118,6 +123,7 @@ plt.figure(figsize=(8,5))
 sns.barplot(x='Embarked', y='Fare', data=tit, palette='rainbow', hue='Pclass') 
 plt.title("Fare of Passenger by Embarked Town, Divided by Class")
 ```
+
 ![image](https://github.com/23008859/EXNO-6-DS/assets/139117979/fa09ec90-bdca-4ed1-a226-961e59d79cc6)
 
 ```
@@ -127,85 +133,108 @@ plt.xlabel('Total Bill')
 plt.ylabel("Tip Amount")
 plt.title('Scatter Plot of Total Bill vs. Tip Amount')
 ```
+
 ![image](https://github.com/23008859/EXNO-6-DS/assets/139117979/a191548b-fa36-4268-9b7f-38c252ec7864)
+
 ```
 num_var = np.random.randn(1000)
 num_var=pd.Series(num_var, name = "Numerical variable")
 num_var
-``
+```
+
 ![image](https://github.com/23008859/EXNO-6-DS/assets/139117979/9948f72d-0e51-4421-a12d-290b42334518)
+
 ```
 sns.histplot(data = num_var, kde = True)
 ```
+
 ![image](https://github.com/23008859/EXNO-6-DS/assets/139117979/69995175-421c-45c9-b79b-2e90c8970a08)
 
 ```
 df=pd.read_csv("titanic_dataset.csv")
 sns.histplot(data=df,x="Pclass", hue="Survived", kde=True)
 ```
+
 ![image](https://github.com/23008859/EXNO-6-DS/assets/139117979/d2157ccf-6380-42df-8ca6-83b34968c678)
+
 ```
 tips=sns.load_dataset('tips')
 sns.boxplot(x=tips['day'], y=tips ['total_bill'], hue=tips['sex'])
 ```
+
 ![image](https://github.com/23008859/EXNO-6-DS/assets/139117979/372c8e66-9f10-426e-925a-268d06107dd3)
 
 ```
 sns.boxplot(x="day", y="total_bill", hue="smoker", data=tips, linewidth=2, width=0.6, boxprops={"facecolor": "lightblue", "edgecolor": "darkblue"},
 whiskerprops={"color": "black", "linestyle": "--", "linewidth": 1.5}, capprops={"color": "black", "linestyle": "--", "linewidth": 1.5})
 ```
+
 ![image](https://github.com/23008859/EXNO-6-DS/assets/139117979/e83b7879-bf96-4421-a0d6-072b8d5ee8b9)
+
 ```
 sns.violinplot(x="day", y="total_bill", hue="smoker", data=tips, linewidth=2, width=0.6, palette="Set3", inner="quartile")
 plt.xlabel("Day of the Week")
 plt.ylabel("Total Bill")
 plt.title("Violin Plot of Total Bill by Day and Smoker Status")
 ```
+
 ![image](https://github.com/23008859/EXNO-6-DS/assets/139117979/79670d7c-3daa-455b-842c-9f31e443408a)
 
 ```
 mart=pd.read_csv("titanic_dataset.csv")
 mart
 ```
+
 ![image](https://github.com/23008859/EXNO-6-DS/assets/139117979/fac65f31-cf43-42f2-999e-10c869300c4f)
 
 ```
 mart=mart[['PassengerId', 'Survived', 'Age', 'Name', 'Ticket', 'Embarked']] 
 mart.head(10)
 ```
+
 ![image](https://github.com/23008859/EXNO-6-DS/assets/139117979/8f2a5210-75ba-47dd-976b-058bb97cd640)
+
 ```
 sns.kdeplot(data=mart,x='PassengerId')
 ```
+
 ![image](https://github.com/23008859/EXNO-6-DS/assets/139117979/9d76d971-7519-44de-a234-e49a45353b9c)
 
 ```
 sns.kdeplot(data=mart,x='Age')
 ```
+
 ![image](https://github.com/23008859/EXNO-6-DS/assets/139117979/39d3d856-7eeb-4a8d-b8df-a231e4c8cb75)
 
 ```
 sns.kdeplot(data=mart)
 ```
+
 ![image](https://github.com/23008859/EXNO-6-DS/assets/139117979/4157d196-20b9-4a52-bf4e-26fffe1c9562)
+
 ```
 sns.kdeplot(data=mart,x='PassengerId',hue='Survived',multiple='stack')
 ```
+
 ![image](https://github.com/23008859/EXNO-6-DS/assets/139117979/eb005d45-0e84-4402-bd6d-9a2ef6000e2e)
 
 ```
 sns.kdeplot(data=mart,x='PassengerId',y='Survived')
 ```
+
 ![image](https://github.com/23008859/EXNO-6-DS/assets/139117979/a3256e75-841f-4461-b989-81f7dd53f328)
 
 ```
 data = np.random.randint(low = 1, high = 100, size = (10,10))
 hm=sns.heatmap(data=data,annot=True)
 ```
+
 ![image](https://github.com/23008859/EXNO-6-DS/assets/139117979/e3a17abe-556d-453f-8936-1a410c10eabf)
+
 ```
 hm=sns.heatmap(data=data)
 ```
+
 ![image](https://github.com/23008859/EXNO-6-DS/assets/139117979/976139ec-5b13-4140-8cf7-50fab47750e5)
 
 # Result:
