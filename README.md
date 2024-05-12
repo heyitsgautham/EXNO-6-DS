@@ -31,6 +31,7 @@ x = [1, 2, 3, 4, 5]
 y = [3, 6, 2, 7, 1]
 sns.lineplot(x=x,y=y)
 ```
+
 ![image](https://github.com/23008859/EXNO-6-DS/assets/139117979/83bd10af-5ff8-4f01-
 8dc4-312d05a7f27a)
 
